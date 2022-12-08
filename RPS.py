@@ -349,6 +349,6 @@ def printStrategiesStats():
   print()
 
 def writeGamesHistoryToFile(games_history):
-    file = open('./games_history.txt', 'w') # modes: 'a' means 'append', 'w' means 'overwrite'
+    file = open('./games_history.txt', 'a') # modes: 'a' means 'append', 'w' means 'overwrite'
     file.write('TITLE: 00\n' + str(games_history) + "\n"*20)
     file.close()
