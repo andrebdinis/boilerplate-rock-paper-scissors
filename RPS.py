@@ -1,7 +1,12 @@
+################## ANOTHER INTERESTING PROJECT ##################
+# Interesting version of FCC rock-paper-scissors project developed by GITHUB account "eisbilir": https://github.com/eisbilir/fcc-rock-paper-scissors
+
+################## IMPORTS AND VARIABLES ##################
 import random
 from itertools import product # to make combinations of plays
 # Doc: https://docs.python.org/3/library/itertools.html
 import pprint
+#from model import MarkovChain # does not pass all the tests
 
 # Initialize variables
 options = [ 'R', 'P', 'S' ]
@@ -341,12 +346,10 @@ def randomPlay():
   # return random.choice(options)
 
 def printStrategiesStats():
-  print('\nStrategies used:')
+  print('Strategies used:')
   pprint.pprint(strategies_used, sort_dicts=True)
-  b = strategies_outcomes.copy()
-  print('\nStrategies scores:')
-  pprint.pprint(b, sort_dicts=True)
-  print()
+  print('Strategies scores:')
+  pprint.pprint(strategies_outcomes, sort_dicts=True)
 
 def writeGamesHistoryToFile(games_history):
     file = open('./games_history.txt', 'a') # modes: 'a' means 'append', 'w' means 'overwrite'
